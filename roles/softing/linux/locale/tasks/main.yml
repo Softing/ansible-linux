@@ -1,5 +1,10 @@
 ---
 
+- name: "Linux::Locale | Install software"
+  package: name={{ item }} state=latest
+  with_items:
+    - locales
+
 - name: "Linux::Locale | Install linux locales"
   locale_gen: name={{ item }} state=present
   with_items: "{{ _linux_locale_installable_locales }}"
