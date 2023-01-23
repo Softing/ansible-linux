@@ -1,0 +1,8 @@
+---
+
+- fail: msg="The <linux_hostname_hostname> variable is not set"
+  when: linux_hostname_hostname is not defined or not linux_hostname_hostname
+
+- name: "Set the hostname {{ linux_hostname_hostname }}"
+  ansible.builtin.hostname:
+    name: "{{ linux_hostname_hostname }}"

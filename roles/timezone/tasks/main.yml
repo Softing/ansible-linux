@@ -1,0 +1,4 @@
+---
+
+- name: "Linux::Timezone | Install linux timezone {{ linux_timezone_timezone }}"
+  timezone: name={{ linux_timezone_timezone }}
