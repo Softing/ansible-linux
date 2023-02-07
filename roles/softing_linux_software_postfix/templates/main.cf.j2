@@ -21,7 +21,7 @@ inet_interfaces = 127.0.0.1
 inet_protocols = all
 mailbox_size_limit = 0
 recipient_delimiter = +
-relayhost = [{{ linux_software_postfix_relay_server }}]:{{ postfix_relay_sever_port }}
+relayhost = [{{ linux_software_postfix_relay_server }}]:{{ linux_software_postfix_relay_sever_port }}
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
 
